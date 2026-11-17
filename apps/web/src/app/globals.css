@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-kiosk: #160309;
+    --bg-kiosk-surface: #260712;
+    --bg-kiosk-card: #340c1a;
+    --accent-gold: #e5b842;
+    --accent-gold-light: #fbe28d;
+    --accent-gold-dark: #b8861e;
+    --jewel-maroon: #680d22;
+    --jewel-peacock: #0a4366;
+    --jewel-emerald: #0b533f;
+    --text-ivory: #faf5ed;
+    --text-muted: #d4c2b2;
+    --border-gold: rgba(229, 184, 66, 0.35);
+  }
+
+  body {
+    background-color: var(--bg-kiosk);
+    color: var(--text-ivory);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Tamil", sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+    touch-action: manipulation;
+  }
+}
+
+/* Custom Temple Zari & Universal Box Border Glow Styles */
+.zari-border {
+  border: 1px solid rgba(229, 184, 66, 0.55);
+  box-shadow: 0 0 20px rgba(229, 184, 66, 0.25), 0 0 40px rgba(229, 184, 66, 0.1), inset 0 0 15px rgba(229, 184, 66, 0.08);
+}
+
+.zari-border-active {
+  border: 2px solid #e5b842;
+  box-shadow: 0 0 30px rgba(229, 184, 66, 0.55), 0 0 60px rgba(229, 184, 66, 0.25), inset 0 0 25px rgba(229, 184, 66, 0.2);
+}
+
+/* Universal border glow for all content boxes, panels, and cards */
+[class*="border-[#e5b842]"],
+[class*="border-\\[\\#e5b842\\]"],
+.box-glow {
+  box-shadow: 0 0 16px rgba(229, 184, 66, 0.22), inset 0 0 10px rgba(229, 184, 66, 0.05);
+}
+
+[class*="border-[#e5b842]"]:hover,
+[class*="border-\\[\\#e5b842\\]"]:hover,
+.box-glow:hover {
+  box-shadow: 0 0 26px rgba(229, 184, 66, 0.36), inset 0 0 14px rgba(229, 184, 66, 0.08);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff2cc 0%, #e5b842 50%, #c18817 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #ecd17d 0%, #e5b842 50%, #b8861e 100%);
+  color: #1a040b;
+}
+
+.gold-gradient-bg:hover {
+  background: linear-gradient(135deg, #f7df96 0%, #f0c34e 50%, #c49126 100%);
+}
+
+.maroon-gradient-bg {
+  background: linear-gradient(160deg, #3d0917 0%, #20040c 100%);
+}
+
+/* Shimmer animation for Try-On generation */
+@keyframes fabricShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.fabric-shimmer {
+  background: linear-gradient(90deg, rgba(229, 184, 66, 0) 0%, rgba(229, 184, 66, 0.25) 50%, rgba(229, 184, 66, 0) 100%);
+  background-size: 200% 100%;
+  animation: fabricShimmer 2.5s infinite linear;
+}
+
+/* Saree drape wave animation */
+@keyframes drapeWave {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+.drape-wave {
+  animation: drapeWave 3s ease-in-out infinite;
+}
+
+/* Start icon pop-on from bottom animation (0.8s delay, butter-smooth spring pop) */
+@keyframes startIconPop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0) scale(0.82);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-start-pop {
+  animation: startIconPop 0.8s cubic-bezier(0.22, 1.25, 0.36, 1) 0.8s both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Animated bokeh background — slow drift + breathe */
+@keyframes bgDrift {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  20% {
+    transform: translate(-2.5%, -1.5%) scale(1.04);
+  }
+  40% {
+    transform: translate(-1%, -3%) scale(1.07);
+  }
+  60% {
+    transform: translate(2%, -1.5%) scale(1.04);
+  }
+  80% {
+    transform: translate(1.5%, 1.5%) scale(1.06);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+.animate-bg-drift {
+  animation: bgDrift 22s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Hanging lantern living glow pulse */
+@keyframes lanternGlow {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.07);
+  }
+  70% {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+}
+
+.animate-lantern-glow {
+  animation: lanternGlow 3.2s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Butter smooth slide in from left for model entrance: 0.6s delay after page loads */
+@keyframes modelSlideInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) scale(0.98);
+  }
+  30% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-model-slide-in-left {
+  animation: modelSlideInLeft 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Butter smooth glide down for Rokea brand header: 0.6s delay after page loads */
+@keyframes butterGlideDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -42px, 0) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-butter-glide-down {
+  animation: butterGlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Specular border rotating beam animation */
+@keyframes specularSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-specular-spin {
+  animation: specularSpin 3.5s linear infinite;
+}
+
+/* Scrollbar styling for touch screens */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e050d;
+}
+::-webkit-scrollbar-thumb {
+  background: #b8861e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e5b842;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CLEAN SMOOTH BOTTOM-TO-TOP (KEELA IRUNTHU MELA) TRANSITION
+   ═══════════════════════════════════════════════════════════════ */
+.smooth-page-up {
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+  will-change: transform;
+}
+
+
+

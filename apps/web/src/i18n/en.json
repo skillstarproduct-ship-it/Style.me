@@ -1,0 +1,148 @@
+{
+  "brand": "Rokea by RK",
+  "tagline": "Luxury Saree Virtual Dressing Room",
+  "welcome": {
+    "headline": "See Yourself in Our Sarees.",
+    "subhead": "Step in front of the kiosk to experience authentic Kanchipuram and Banarasi pure silk sarees draped seamlessly on you.",
+    "privacy": "Your privacy is guaranteed: camera checks run 100% locally in this kiosk display. No photo is processed or uploaded without your explicit consent.",
+    "startButton": "Start Virtual Try-On",
+    "touchToBegin": "Touch the screen to begin your royal styling experience"
+  },
+  "nav": {
+    "step1": "1. Choose Saree",
+    "step2": "2. Camera",
+    "step3": "3. Confirm",
+    "step4": "4. Virtual Try-On",
+    "step5": "5. Your Look",
+    "finishSession": "Finish Session",
+    "cameraActive": "Camera Active"
+  },
+  "permission": {
+    "title": "Camera Setup for Full-Body Dressing",
+    "desc": "To visualize sarees draped on your actual posture, the kiosk requires full-body camera access. Video is never streamed to any cloud server.",
+    "enableBtn": "Activate Kiosk Camera",
+    "retryBtn": "Retry Camera Connection",
+    "selectCamera": "Select Camera Device",
+    "deniedTitle": "Camera Access Denied",
+    "deniedDesc": "Camera permission was not granted. Please check system permissions or kiosk hardware connection.",
+    "notFoundTitle": "No Camera Detected",
+    "notFoundDesc": "Please ensure the kiosk camera is securely connected to the USB port and power is on.",
+    "fallbackNotice": "For hardware testing or device without camera, you can switch to test customer mode."
+  },
+  "positioning": {
+    "title": "Full-Body Framing & Posture Guide",
+    "instructions": "Stand on the golden floor marker (~2.4m away) facing the screen with head and feet inside the frame.",
+    "autoCapture": "Auto-capture triggers after 2 seconds of steady framing",
+    "manualCapture": "Capture Photo Now",
+    "retake": "Retake Photo",
+    "switchCamera": "Switch Camera",
+    "sampleFallback": "Use Test Silhouette",
+    "chips": {
+      "person": "Person",
+      "head": "Head",
+      "feet": "Feet",
+      "distance": "Distance",
+      "lighting": "Lighting",
+      "stability": "Steady"
+    },
+    "guidance": {
+      "noPerson": "Please step in front of the kiosk camera.",
+      "multiPerson": "Multiple people detected. Only one customer in frame please.",
+      "headCut": "Please step back slightly — your head is cut off.",
+      "feetCut": "Please step back — your feet are not fully visible.",
+      "offCenter": "Please stand in the centre of the golden frame.",
+      "tooClose": "You are too close. Please step back to the floor marker.",
+      "tooFar": "You are too far. Please take a half-step forward.",
+      "lowLight": "Lighting is dim. Please face the frontal illumination.",
+      "unsteady": "Hold still for capture...",
+      "perfect": "Perfect posture! Capturing in..."
+    }
+  },
+  "confirm": {
+    "title": "Review Your Capture",
+    "desc": "Ensure your entire body from head to feet is clearly visible and posture is upright.",
+    "consentHeading": "Explicit AI Processing Consent",
+    "consentBody": "By continuing, you consent to sending this single still image to our AI virtual try-on engine to generate your saree look. This image is strictly confidential, isolated to your session, and scheduled for immediate deletion upon session finish.",
+    "retakeBtn": "Retake Photo",
+    "confirmBtn": "Confirm & Choose Saree"
+  },
+  "catalog": {
+    "title": "Select the Royal Saree",
+    "selectJewelsTitle": "Select the Royal Jewels",
+    "selectJewelsBtn": "Select the Jewels",
+    "subtitle": "Explore handwoven pure silk sarees from Rokea's signature collection",
+    "searchPlaceholder": "Search by color, fabric, SKU, or motif...",
+    "categories": {
+      "all": "All Sarees",
+      "pattu": "Pattu Sarees",
+      "silk": "Silk Sarees",
+      "soft_silk": "Soft Silk Sarees",
+      "premium_soft_silk": "Premium Soft Silk",
+      "kasavu": "Kasavu Sarees",
+      "dubion": "Dubion Sarees",
+      "cotton": "Cotton Sarees",
+      "butter_silk": "Butter Silk Sarees",
+      "crepe": "Crepe Sarees",
+      "kanchipuram": "Kanchipuram Silk",
+      "banarasi": "Banarasi Brocade",
+      "chanderi": "Chanderi & Organza",
+      "festive": "Festive & Bridal"
+    },
+    "inStock": "In Stock",
+    "madeToOrder": "Made to Order",
+    "tryonEligible": "Try-On Ready",
+    "selected": "Selected Saree",
+    "tryOnBtn": "Try On This Saree",
+    "sku": "SKU",
+    "price": "Price",
+    "fabric": "Fabric",
+    "origin": "Weave Origin",
+    "pallu": "Pallu Work"
+  },
+  "generating": {
+    "title": "Draping Your Saree with AI...",
+    "subtitle": "Generating authentic pleats, real gold zari borders and bespoke posture alignment",
+    "steps": {
+      "validating": "Validating full-body capture & proportions",
+      "queued": "Queued in Rokea virtual dressing room",
+      "processing": "Synthesizing authentic silk drape & texture",
+      "quality": "AI quality review (pleat & zari alignment)",
+      "completed": "Ready! Preparing dressing room display"
+    },
+    "disclaimer": "Processing takes approximately 6-12 seconds on our dedicated AI engine."
+  },
+  "result": {
+    "title": "See Yourself in Rokea",
+    "disclaimer": "AI visualization may not reproduce the exact fabric texture, fit, color or physical draping.",
+    "sliderHint": "Drag the slider left and right to compare before & after",
+    "before": "Original Photo",
+    "after": "Draped Saree Look",
+    "tryAnother": "Try Another Saree",
+    "reportIssue": "Report Inaccurate Design",
+    "qrPhone": "Get on Your Phone",
+    "finish": "Finish & Reset Session"
+  },
+  "feedback": {
+    "title": "Report Design / Draping Feedback",
+    "subtitle": "Help us calibrate our saree draping engine for future boutique updates",
+    "fidelityLabel": "Design & Motif Fidelity",
+    "drapingLabel": "Draping & Pleat Realism",
+    "identityLabel": "Face & Posture Preservation",
+    "issueCategory": "Issue Category",
+    "commentPlaceholder": "Any specific details (e.g. border width, pallu direction, color variation)...",
+    "submit": "Submit Feedback",
+    "cancel": "Cancel",
+    "thanks": "Thank you for your valuable feedback!"
+  },
+  "qr": {
+    "title": "View Look on Your Phone",
+    "desc": "Scan this temporary QR code to view your generated try-on result on your personal mobile device.",
+    "expiryNotice": "This link is private and will expire in 15 minutes.",
+    "close": "Close"
+  },
+  "inactivity": {
+    "title": "Are You Still Shopping?",
+    "warning": "This kiosk session will reset in {seconds} seconds due to inactivity to protect customer privacy.",
+    "stayBtn": "I'm Still Here — Keep Shopping"
+  }
+}
